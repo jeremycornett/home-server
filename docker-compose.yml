@@ -9,7 +9,7 @@ services:
       MYSQL_PASSWORD: your_filerun_password
       MYSQL_DATABASE: your_filerun_database
     volumes:
-      - filerun/db:/var/lib/mysql
+      - .\filerun\db:/var/lib/mysql
 
   web:
     image: afian/filerun
@@ -26,5 +26,5 @@ services:
     ports:
       - "80:80"
     volumes:
-      - filerun/html:/var/www/html
-      - filerun/user-files:/user-files
+      - .\filerun\html:/var/www/html
+      - .\filerun\user-files:/user-files
